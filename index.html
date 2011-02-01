@@ -1,0 +1,68 @@
+<!--
+/****************************************************************************************\
+*  Creative Commons - Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+*  You are free to Share and to Remix Under the following conditions:
+*  Attribution  - You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).
+*  Noncommercial — You may not use this work for commercial purposes.
+*  Share Alike — If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
+*  
+*  Developed by Claudio Meinberg (@ClaudioMeinberg) and Israel Teixeira (@israelst)
+\****************************************************************************************/
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CrossFilter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Ferramenta para facilitar o acompanhamento de discussões no twitter desenvolvida durante a Campus Party 2011">
+    <meta name="keywords" content="twitter search busca organizar acompanhar organize track hashtag trendtopic trend topic campusparty cp cp4 brcp4 campus party ">
+		<meta name="Author" content="Claudio Meinberg e Israel Teixeira - @ClaudioMeinberg @israelst">
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/crossfilter.js"></script>
+    <script type="text/javascript" src="js/palavras.js"></script>
+    <script type="text/javascript" src="js/filtros.js"></script>
+    <script type="text/javascript" src="js/documento.js"></script>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <link rel="stylesheet" href="css/crossfilter.css" />
+  </head>
+  <body>
+    <section id="wrapper">
+      <header>
+        <h1><div id="headLogo"><a href="/"><span id="css">Cross</span><span id="logo">Filter</span><span id="beta">beta </span></a></div></h1>
+  
+        <form id="formSearch" action="http://search.twitter.com/search.json">
+          <input type="text" name="busca" id="busca" />
+          <input type="hidden" name="q" id="q" />
+          <input type="hidden" name="result_type" value="recent" />
+          <button>Search</button>
+        </form>
+      </header>
+      <div id="cross" class="resultFields">
+        <div id="block2" class="resultDataFields"></div>
+        <div id="block1" class="resultDataFields"></div>
+        <div id="block3" class="resultDataFields"></div>
+        <div id="block4" class="resultDataFields"></div>
+      </div>
+      <div id="result" class="resultFields resultDataFields"></div>
+      <footer>
+        built by <a id="built" href="http://twitter.com/ClaudioMeinberg" target="_blank">@ClaudioMeinberg</a> and <a id="built" href="http://twitter.com/israelst" target="_blank">@israelst</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Licença Creative Commons" style="border-width:0; float:right; margin-right:10px;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+      </footer>
+  
+      <div id="loading" class="loadingScreen"></div>
+      <div id="loading_txt" class="loadingScreen"></div>
+    </section>
+		<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20917790-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

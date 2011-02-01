@@ -1,0 +1,247 @@
+/****************************************************************************************\
+*  Creative Commons - Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+*  You are free to Share and to Remix Under the following conditions:
+*  Attribution  - You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).
+*  Noncommercial — You may not use this work for commercial purposes.
+*  Share Alike — If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
+*  
+*  Developed by Claudio Meinberg (@ClaudioMeinberg) and Israel Teixeira (@israelst)
+\****************************************************************************************/
+
+* {margin:0; padding: 0}
+ 
+body {
+	background: #E4E5E6;
+}
+header{
+	text-align:center;
+	padding:25px;
+}
+a{
+	color:#000;
+	text-decoration:none;
+}
+h1 { 
+     font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal;
+		 text-align:center;
+}
+p {
+	font-family: Arial, 'Helvetica Neue', sans-serif;
+	line-height: 19px;
+	padding: 0px;
+	word-wrap: break-word;
+} 
+.tweet {
+	font-size: 15px;
+	padding: 10px;
+	position: relative;
+	zoom: 1;
+}
+.tweet-content {
+	margin: 20px;
+	min-height: 48px;
+	border-bottom:1px #999 inset;
+}
+.tweet-timestamp {
+	color: #999 !important;
+	font-size: 11px;
+}
+.tweet-row {
+	display: block;
+	line-height: 15px;
+	position: relative;
+	border-top: 1px solid transparent !important;
+	margin-top: -1px;
+}
+.tweet-row:hover{
+	background-color: rgba(47, 194, 239, 0.0976563);
+	border-color: rgba(47, 194, 239, 0.148438);
+}
+#tweet-publisher a{
+	font-weight:bold;
+	color:#1AA6DE;
+}
+span#headLogo{
+	cursor:pointer;
+}
+
+span#css {
+	background: #fad224; /*#fad224*/
+	color:#05648a;
+	padding: 5px 15px;
+	text-shadow: 0 1px 0 #fbf0c3;
+
+	*border-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-bottomleft: 10px;	
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+
+	background:-moz-linear-gradient(-90deg, #FdE673, #F2C70A) repeat scroll 0 0 transparent;
+  background:-webkit-gradient(linear, left top, left bottom, from(#FdE673), to(#F2C70A));
+	background: linear-gradient(#FdE673, #F2C70A);
+	-pie-background: linear-gradient(#FdE673, #F2C70A);
+	behavior: url(/PIE.htc);
+}
+ 
+span#logo {
+	background: #252525;
+	padding: 5px 15px;
+	text-shadow: 0 2px 0 #000;
+	color: #FFF;
+
+	*border-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;	
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+
+	background:-moz-linear-gradient(-90deg, #1AA6DE, #09739e) repeat scroll 0 0 transparent;
+  background:-webkit-gradient(linear, left top, left bottom, from(#1AA6DE), to(#09739e));
+	background: linear-gradient(#1AA6DE, #09739e);
+	-pie-background: linear-gradient(#1AA6DE, #09739e);
+	behavior: url(/PIE.htc);
+}
+
+span#beta{
+	display: block;
+	writing-mode: tb-rl;
+	-webkit-transform: rotate(90deg);
+ -moz-transform: rotate(90deg);
+
+	position:absolute;
+	font-size: 14px;
+	left:50%;
+	margin-left:104px;
+	margin-top:-27px;
+
+}
+ 
+input{
+	margin-top:25px;
+	border-color:#cccccc #999999 #999999 #cccccc;
+	border-style:solid;
+	border-width:1px;
+	color:#000;
+	font:18px Arial, Helvetica, sans-serif;
+	height:28px;
+	width:400px;
+}
+
+button{
+	margin-top:25px;
+	border-color:#cccccc #999999 #999999 #cccccc;
+	border-style:solid;
+	border-width:1px;
+	color:#000;
+	font:14px Arial, Helvetica, sans-serif;
+	height:30px;
+	width:70px;
+	vertical-align:top;
+	cursor:pointer;
+}
+
+#cross{
+	position:absolute;
+	width:419px;
+	left:50%;
+	margin-left:-200px;
+}
+#cross div{
+	width:200px;
+	height:70px;
+	float:left;
+	padding:3px;
+	border:1px inset;
+
+	font-family:Verdana, Geneva, sans-serif;
+	text-align:center;
+	vertical-align:middle;
+	background-color:#fff;
+}
+
+#cross div a{
+	font-size:18px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+}
+
+.block{
+	border:1px inset;
+}
+
+
+
+#result{
+
+	zoom: 1;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:180%;
+	position:absolute;
+	width:800px;
+	left:50%;
+	margin-left:-400px;
+	margin-top:200px;
+	background:#fff;
+	padding:10px;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#loading{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+
+	background-color: #000;
+	width: 100%;
+	color: #ffffff;
+	opacity: .7;
+	filter: alpha(opacity=30);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+}
+
+#loading_txt{
+	width:32px;
+	height:32px;
+	position:absolute;
+
+
+	left:50%;
+	top:50%;
+	margin-left:-16px;
+	margin-top:-16px;
+}
+
+footer{
+	font:12px Arial, Helvetica, sans-serif;
+	background-color:#252525;
+	color:#ccc;
+	position:fixed;
+	left:-20px;
+	bottom:0;
+	width:102%;
+
+	padding: 5px 0px;
+	text-shadow: 0 1px 0 #000;
+
+	background:-moz-linear-gradient(-90deg, #1AA6DE, #09739e) repeat scroll 0 0 transparent;
+  background:-webkit-gradient(linear, left top, left bottom, from(#1AA6DE), to(#09739e));
+
+	background: linear-gradient(#1AA6DE, #09739e);
+	-pie-background: linear-gradient(#1AA6DE, #09739e);
+	behavior: url(/PIE.htc);
+
+	text-align:right;
+}
+footer a{
+	color:#fff;
+	text-decoration:none;
+}
+footer #cc{
+	float:left;
+}
