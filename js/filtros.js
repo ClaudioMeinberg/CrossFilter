@@ -4,20 +4,22 @@
 *  Attribution  - You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).
 *  Noncommercial — You may not use this work for commercial purposes.
 *  Share Alike — If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
-*  
+*
 *  Developed by Claudio Meinberg (@ClaudioMeinberg) and Israel Teixeira (@israelst)
 \****************************************************************************************/
 
 var Filtros = function() {
-	this.palavras_ignoradas = ['pra', 'para', 'com', 'que', '...']
-	this.ignora_palavra = function(palavra) {
+	var palavras_ignoradas = ['pra', 'para', 'com', 'que', '...']
+	this.ignorar_palavra = function(palavra) {
 		palavra = palavra.toLowerCase()
-		this.palavras_ignoradas.push(palavra)
-		this.palavras_ignoradas.push('@'+palavra)
-		this.palavras_ignoradas.push('#'+palavra)
+		palavras_ignoradas.push(palavra)
+		palavras_ignoradas.push('@' + palavra)
+		palavras_ignoradas.push('#' + palavra)
 	}
+
 	this.validar = function(palavra) {
-		return palavra.length > 2 && this.palavras_ignoradas.indexOf(palavra.toLowerCase()) == - 1
+		var eh_palavra_ignorada = (palavras_ignoradas.indexOf(palavra.toLowerCase()) == - 1)
+		return palavra.length > 2 && eh_palavra_ignorada
 	}
 }
 
