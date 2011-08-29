@@ -13,8 +13,10 @@ $(document).ready(function() {
 	hideLoadingScreen()
 
 	$('#formSearch').bind('submit', function() {
-		setNewSearch()
-		doYourThing();
+                if ($("#busca").val() != "") {
+		    setNewSearch()
+		    doYourThing()
+                }
 		
 		return false
 	})
